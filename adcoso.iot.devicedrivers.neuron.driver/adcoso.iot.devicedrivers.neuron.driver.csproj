@@ -104,7 +104,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="project.json" />   
+    <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="analogoutput\IDataEventSource.cs" />
@@ -126,7 +126,7 @@
     <Compile Include="digitaloutputs\IDigitalOutput.cs" />
     <Compile Include="board\INeuron.cs" />
     <Compile Include="board\IBoardInformation.cs" />
-    <Compile Include="board\IUniqueIdentifyer.cs" />
+    <Compile Include="board\IUniqueIdentifier.cs" />
     <Compile Include="board\INeuronDataResource.cs" />
     <Compile Include="userled\IUserLed.cs" />
     <Compile Include="analoginput\AnalogInput.cs" />
@@ -137,7 +137,7 @@
     <Compile Include="board\NeuronBoard.cs" />
     <Compile Include="board\BoardInformation.cs" />
     <Compile Include="boardcommunication\spi\NeuronSpiMessageFactory.cs" />
-    <Compile Include="board\UniqueIdentifyer.cs" />
+    <Compile Include="board\UniqueIdentifier.cs" />
     <Compile Include="userled\UserLed.cs" />
     <Compile Include="boardcommunication\i2c\InterruptConnector.cs" />
     <Compile Include="boardcommunication\spi\NeuronSpiConnector.cs" />

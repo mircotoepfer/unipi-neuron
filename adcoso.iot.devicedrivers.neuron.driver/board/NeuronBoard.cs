@@ -27,21 +27,21 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         
         protected readonly DriverLogger Logger;
         
-        protected readonly Dictionary<IUniqueIdentifyer, IDigitalInput> DigitalInputDictionary;
+        protected readonly Dictionary<IUniqueIdentifier, IDigitalInput> DigitalInputDictionary;
         
-        protected readonly Dictionary<IUniqueIdentifyer, IDigitalOutput> DigitalOutputsDictionary;
+        protected readonly Dictionary<IUniqueIdentifier, IDigitalOutput> DigitalOutputsDictionary;
         
-        protected readonly Dictionary<IUniqueIdentifyer, IDigitalOutput> RelayOutputsDictionary;
+        protected readonly Dictionary<IUniqueIdentifier, IDigitalOutput> RelayOutputsDictionary;
         
-        protected readonly Dictionary<IUniqueIdentifyer, IUserLed> UserLedsDictionary;
+        protected readonly Dictionary<IUniqueIdentifier, IUserLed> UserLedsDictionary;
         
-        protected readonly Dictionary<IUniqueIdentifyer, IAnalogInput> AnalogInputsDictionary;
+        protected readonly Dictionary<IUniqueIdentifier, IAnalogInput> AnalogInputsDictionary;
         
-        protected readonly Dictionary<IUniqueIdentifyer, IAnalogOutput> AnalogOutputsDictionary;
+        protected readonly Dictionary<IUniqueIdentifier, IAnalogOutput> AnalogOutputsDictionary;
         
-        protected readonly Dictionary<IUniqueIdentifyer, IOneWireConnector> OneWireConnectorsDictionary;
+        protected readonly Dictionary<IUniqueIdentifier, IOneWireConnector> OneWireConnectorsDictionary;
         
-        protected readonly Dictionary<IUniqueIdentifyer, IModbusConnector> ModbusConnectorsDictionary;
+        protected readonly Dictionary<IUniqueIdentifier, IModbusConnector> ModbusConnectorsDictionary;
 
 
         #endregion Protected Members
@@ -70,14 +70,14 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
 
             BoardSystemInformation = boardSystemInformation;
 
-            DigitalInputDictionary = new Dictionary<IUniqueIdentifyer, IDigitalInput>();
-            DigitalOutputsDictionary = new Dictionary<IUniqueIdentifyer, IDigitalOutput>();
-            RelayOutputsDictionary = new Dictionary<IUniqueIdentifyer, IDigitalOutput>();
-            UserLedsDictionary = new Dictionary<IUniqueIdentifyer, IUserLed>();
-            AnalogInputsDictionary = new Dictionary<IUniqueIdentifyer, IAnalogInput>();
-            AnalogOutputsDictionary = new Dictionary<IUniqueIdentifyer, IAnalogOutput>();
-            OneWireConnectorsDictionary = new Dictionary<IUniqueIdentifyer, IOneWireConnector>();
-            ModbusConnectorsDictionary = new Dictionary<IUniqueIdentifyer, IModbusConnector>();
+            DigitalInputDictionary = new Dictionary<IUniqueIdentifier, IDigitalInput>();
+            DigitalOutputsDictionary = new Dictionary<IUniqueIdentifier, IDigitalOutput>();
+            RelayOutputsDictionary = new Dictionary<IUniqueIdentifier, IDigitalOutput>();
+            UserLedsDictionary = new Dictionary<IUniqueIdentifier, IUserLed>();
+            AnalogInputsDictionary = new Dictionary<IUniqueIdentifier, IAnalogInput>();
+            AnalogOutputsDictionary = new Dictionary<IUniqueIdentifier, IAnalogOutput>();
+            OneWireConnectorsDictionary = new Dictionary<IUniqueIdentifier, IOneWireConnector>();
+            ModbusConnectorsDictionary = new Dictionary<IUniqueIdentifier, IModbusConnector>();
 
             _pollInProgess = false;
             _pollingTimer = new Timer(PollInformation, new object(), 50, 50);
@@ -131,52 +131,52 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
 
         #region Public Methods
 
-        public IDigitalOutput GetDigitalOutput(IUniqueIdentifyer identifyer)
+        public IDigitalOutput GetDigitalOutput(IUniqueIdentifier identifier)
         {
             IDigitalOutput item;
-            return DigitalOutputsDictionary.TryGetValue(identifyer, out item) ? item : null;
+            return DigitalOutputsDictionary.TryGetValue(identifier, out item) ? item : null;
         }
 
-        public IDigitalInput GetDigitalInput(IUniqueIdentifyer identifyer)
+        public IDigitalInput GetDigitalInput(IUniqueIdentifier identifier)
         {
             IDigitalInput item;
-            return DigitalInputDictionary.TryGetValue(identifyer, out item) ? item : null;
+            return DigitalInputDictionary.TryGetValue(identifier, out item) ? item : null;
         }
 
-        public IDigitalOutput GetRelayOutput(IUniqueIdentifyer identifyer)
+        public IDigitalOutput GetRelayOutput(IUniqueIdentifier identifier)
         {
             IDigitalOutput item;
-            return RelayOutputsDictionary.TryGetValue(identifyer, out item) ? item : null;
+            return RelayOutputsDictionary.TryGetValue(identifier, out item) ? item : null;
         }
 
-        public IUserLed GetUserLed(IUniqueIdentifyer identifyer)
+        public IUserLed GetUserLed(IUniqueIdentifier identifier)
         {
             IUserLed item;
-            return UserLedsDictionary.TryGetValue(identifyer, out item) ? item : null;
+            return UserLedsDictionary.TryGetValue(identifier, out item) ? item : null;
         }
 
-        public IAnalogInput GetAnalogInput(IUniqueIdentifyer identifyer)
+        public IAnalogInput GetAnalogInput(IUniqueIdentifier identifier)
         {
             IAnalogInput item;
-            return AnalogInputsDictionary.TryGetValue(identifyer, out item) ? item : null;
+            return AnalogInputsDictionary.TryGetValue(identifier, out item) ? item : null;
         }
 
-        public IAnalogOutput GetAnalogOutput(IUniqueIdentifyer identifyer)
+        public IAnalogOutput GetAnalogOutput(IUniqueIdentifier identifier)
         {
             IAnalogOutput item;
-            return AnalogOutputsDictionary.TryGetValue(identifyer, out item) ? item : null;
+            return AnalogOutputsDictionary.TryGetValue(identifier, out item) ? item : null;
         }
 
-        public IOneWireConnector GetOneWireConnector(IUniqueIdentifyer identifyer)
+        public IOneWireConnector GetOneWireConnector(IUniqueIdentifier identifier)
         {
             IOneWireConnector item;
-            return OneWireConnectorsDictionary.TryGetValue(identifyer, out item) ? item : null;
+            return OneWireConnectorsDictionary.TryGetValue(identifier, out item) ? item : null;
         }
 
-        public IModbusConnector GetModbusConnector(IUniqueIdentifyer identifyer)
+        public IModbusConnector GetModbusConnector(IUniqueIdentifier identifier)
         {
             IModbusConnector item;
-            return ModbusConnectorsDictionary.TryGetValue(identifyer, out item) ? item : null;
+            return ModbusConnectorsDictionary.TryGetValue(identifier, out item) ? item : null;
         }
 
         public void RaiseAllObjectEvents()

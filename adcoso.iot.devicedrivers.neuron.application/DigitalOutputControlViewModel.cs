@@ -22,7 +22,7 @@ namespace adcoso.iot.devicedrivers.neuron.application
         public DigitalOutputControlViewModel(IDigitalOutput digitalOutput)
         {
             digitalOutput.OnOutputStateChanged += DigitalInput_OnDigitalOutputChanged;
-            Name = digitalOutput.UniqueIdentifyer.IdentifyerString;
+            Name = digitalOutput.UniqueIdentifyer.IdentifierString;
 
             OnCommand = new RelayCommand(() => digitalOutput.SetOutputValue(OnOffValue.On));
             OffCommand = new RelayCommand(() => digitalOutput.SetOutputValue(OnOffValue.Off));

@@ -7,7 +7,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.analogoutput
 
     public interface IAnalogOutput : INeuronDataResource, IDataEventSource
     {
-        IUniqueIdentifyer UniqueIdentifyer { get; }
+        IUniqueIdentifier UniqueIdentifyer { get; }
         void SetPercentValue(double percent);
         double GetCurrentPercentValue();
         double GetCurrentMilliAmpereValue();

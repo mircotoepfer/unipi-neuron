@@ -28,7 +28,7 @@ namespace adcoso.iot.devicedrivers.neuron.application
         {
             userLed.OnUserLedStateChanged += UserLedOnOnUserLedStateChanged;
             _userLed = userLed;
-            Name = userLed.UniqueIdentifyer.IdentifyerString;
+            Name = userLed.UniqueIdentifyer.IdentifierString;
 
             OnCommand = new RelayCommand(OnCommandMethod);
             OffCommand = new RelayCommand(OffCommandMethod);

@@ -20,7 +20,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.userled
 
         internal UserLed(int ledNumber, NeuronGroup neuronGroup, ushort coilNumber, NeuronSpiConnector neuronSpiConnector, ushort registerNumber, ushort bitNumber)
         {
-            UniqueIdentifyer = new UniqueIdentifyer(neuronGroup, NeuronResource.UserLed, ledNumber);
+            UniqueIdentifyer = new UniqueIdentifier(neuronGroup, NeuronResource.UserLed, ledNumber);
 
             _coilNumber = coilNumber;
             _neuronSpiConnector = neuronSpiConnector;
@@ -29,7 +29,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.userled
             _currentValue = OnOffValue.Unknown;
         }
 
-        public IUniqueIdentifyer UniqueIdentifyer { get; }
+        public IUniqueIdentifier UniqueIdentifyer { get; }
 
         public void SetUserLed(OnOffValue value)
         {

@@ -2,10 +2,10 @@
 
 namespace adcoso.iot.devicedrivers.neuron.driver.board
 {
-    public class UniqueIdentifyer : IUniqueIdentifyer
+    public class UniqueIdentifier : IUniqueIdentifier
     {
         #region Constructor
-        internal UniqueIdentifyer(NeuronGroup group, NeuronResource resource, int number)
+        internal UniqueIdentifier(NeuronGroup group, NeuronResource resource, int number)
         {
             Resource = resource;
             Group = group;
@@ -17,7 +17,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         public NeuronResource Resource { get; }
         public NeuronGroup Group { get; }
         public int Number { get; }
-        public string IdentifyerString
+        public string IdentifierString
         {
             get
             {
@@ -34,7 +34,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
 
         #region Public Methods
         
-        public override string ToString() => IdentifyerString;
+        public override string ToString() => IdentifierString;
         #endregion Public Methods
 
         #region Private Methods

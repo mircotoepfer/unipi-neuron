@@ -44,7 +44,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.onewire
             _logger = logger;
             _logger.LogInformation(this, "create Instance...");
 
-            UniqueIdentifyer = new UniqueIdentifyer(neuronGroup, NeuronResource.OneWireConnector, number);
+            UniqueIdentifyer = new UniqueIdentifier(neuronGroup, NeuronResource.OneWireConnector, number);
 
             OneWirePeriodicBusScan = true;
             _timerState = new object();
@@ -91,7 +91,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.onewire
 
         #region Public Properties
 
-        public IUniqueIdentifyer UniqueIdentifyer { get; }
+        public IUniqueIdentifier UniqueIdentifyer { get; }
 
 
         /// <summary>

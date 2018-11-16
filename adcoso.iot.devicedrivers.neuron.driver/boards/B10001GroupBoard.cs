@@ -17,7 +17,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.boards
         #region Private Members
         private const ushort AnzahlDigitalInputs = 4;
         private const ushort AnzahlDigitalOutputs = 4;
-        private const ushort AnzahlUserLeds = 4;
+        private const ushort UserLedsCount = 4;
         #endregion
 
         public B10001GroupBoard(NeuronGroup neuronGroup, IBoardInformation boardSystemInformation, NeuronSpiConnector spiConnector, I2CConnector i2CConnector, DriverLogger logger) : base(neuronGroup, boardSystemInformation, spiConnector, i2CConnector, logger)
@@ -53,7 +53,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.boards
 
             #region User LED's
 
-            for (ushort i = 0; i < AnzahlUserLeds; i++)
+            for (ushort i = 0; i < UserLedsCount; i++)
             {
                 var userLed = new UserLed(i + 1, neuronGroup, (ushort)(8 + i), spiConnector,20,i);
                 UserLedsDictionary.Add(userLed.UniqueIdentifyer, userLed);

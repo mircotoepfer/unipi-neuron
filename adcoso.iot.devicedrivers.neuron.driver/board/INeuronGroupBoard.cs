@@ -45,28 +45,28 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         event UserLedStateChanged OnUserLedStateChanged;
 
         
-        IDigitalOutput GetDigitalOutput(IUniqueIdentifyer identifyer);
+        IDigitalOutput GetDigitalOutput(IUniqueIdentifier identifier);
 
         
-        IDigitalInput GetDigitalInput(IUniqueIdentifyer identifyer);
+        IDigitalInput GetDigitalInput(IUniqueIdentifier identifier);
 
         
-        IDigitalOutput GetRelayOutput(IUniqueIdentifyer identifyer);
+        IDigitalOutput GetRelayOutput(IUniqueIdentifier identifier);
 
         
-        IUserLed GetUserLed(IUniqueIdentifyer identifyer);
+        IUserLed GetUserLed(IUniqueIdentifier identifier);
 
         
-        IAnalogInput GetAnalogInput(IUniqueIdentifyer identifyer);
+        IAnalogInput GetAnalogInput(IUniqueIdentifier identifier);
 
         
-        IAnalogOutput GetAnalogOutput(IUniqueIdentifyer identifyer);
+        IAnalogOutput GetAnalogOutput(IUniqueIdentifier identifier);
 
         
-        IOneWireConnector GetOneWireConnector(IUniqueIdentifyer identifyer);
+        IOneWireConnector GetOneWireConnector(IUniqueIdentifier identifier);
 
         
-        IModbusConnector GetModbusConnector(IUniqueIdentifyer identifyer);
+        IModbusConnector GetModbusConnector(IUniqueIdentifier identifier);
 
         void RaiseAllObjectEvents();
     }

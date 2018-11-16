@@ -18,13 +18,13 @@ namespace adcoso.iot.devicedrivers.neuron.driver.digitalinputs
         {
             _registerNumber = registerNumber;
             _bitInRegister = bitInRegister;
-            UniqueIdentifyer = new UniqueIdentifyer(neuronGroup, NeuronResource.DigitalInput, numberOfInputOnGroup);
+            UniqueIdentifyer = new UniqueIdentifier(neuronGroup, NeuronResource.DigitalInput, numberOfInputOnGroup);
             _currentValue = OnOffValue.Unknown;
         }
         #endregion Constructor
 
         #region Public Methods
-        public IUniqueIdentifyer UniqueIdentifyer { get; }
+        public IUniqueIdentifier UniqueIdentifyer { get; }
         public OnOffValue GetDigitalInputValue() => _currentValue;
         public void RaiseAllObjectEvents() => RaiseOnDigitalInputChanged(this, _currentValue);
         #endregion Public Methods

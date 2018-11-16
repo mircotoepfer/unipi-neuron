@@ -18,7 +18,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         IReadOnlyList<IDigitalOutput> DigitalOutputs { get; }
 
         
-        IDigitalOutput GetDigitalOutput(IUniqueIdentifyer identifyer);
+        IDigitalOutput GetDigitalOutput(IUniqueIdentifier identifier);
 
         #endregion Digital Outputs
 
@@ -28,7 +28,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         IReadOnlyList<IDigitalInput> DigitalInputs { get; }
 
         
-        IDigitalInput GetDigitalInput(IUniqueIdentifyer identifyer);
+        IDigitalInput GetDigitalInput(IUniqueIdentifier identifier);
 
         #endregion Digital Inputs
 
@@ -37,7 +37,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         IReadOnlyList<IDigitalOutput> RelayOutputs { get; }
 
         
-        IDigitalOutput GetRelayOutput(IUniqueIdentifyer identifyer);
+        IDigitalOutput GetRelayOutput(IUniqueIdentifier identifier);
 
         #endregion Relay Outputs
 
@@ -47,7 +47,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         IReadOnlyList<IUserLed> UserLeds { get; }
 
         
-        IUserLed GetUserLed(IUniqueIdentifyer identifyer);
+        IUserLed GetUserLed(IUniqueIdentifier identifier);
 
         #endregion User LED's
 
@@ -56,7 +56,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         IReadOnlyList<IAnalogInput> AnalogInputs { get; }
 
         
-        IAnalogInput GetAnalogInput(IUniqueIdentifyer identifyer);
+        IAnalogInput GetAnalogInput(IUniqueIdentifier identifier);
         #endregion Analog Inputs
 
         #region Analog Outputs
@@ -65,7 +65,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         IReadOnlyList<IAnalogOutput> AnalogOutputs { get; }
 
         
-        IAnalogOutput GetAnalogOutput(IUniqueIdentifyer identifyer);
+        IAnalogOutput GetAnalogOutput(IUniqueIdentifier identifier);
 
         #endregion Analog Outputs
 
@@ -74,7 +74,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         IReadOnlyList<IOneWireConnector> OneWireConnectors { get; }
 
         
-        IOneWireConnector GetOneWireConnector(IUniqueIdentifyer identifyer);
+        IOneWireConnector GetOneWireConnector(IUniqueIdentifier identifier);
 
 
         #endregion One Wire
@@ -84,7 +84,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.board
         IReadOnlyList<IModbusConnector> ModbusConnectors { get; }
 
         
-        IModbusConnector GetModbusConnector(IUniqueIdentifyer identifyer);
+        IModbusConnector GetModbusConnector(IUniqueIdentifier identifier);
 
         #endregion Modbus
 

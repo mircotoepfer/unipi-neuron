@@ -32,7 +32,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.analogoutput
             _neuronGroup = neuronGroup;
             _spiConnector = spiConnector;
 
-            UniqueIdentifyer = new UniqueIdentifyer(neuronGroup, NeuronResource.AnalogOutput, number);
+            UniqueIdentifyer = new UniqueIdentifier(neuronGroup, NeuronResource.AnalogOutput, number);
 
             var vOffset = _spiConnector.GetSingleRegisterValue(neuronGroup, 1021);
             var vDef = _spiConnector.GetSingleRegisterValue(neuronGroup, 1020);
@@ -52,7 +52,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.analogoutput
         #endregion Constructor
 
         #region Public Methods
-        public IUniqueIdentifyer UniqueIdentifyer { get; }
+        public IUniqueIdentifier UniqueIdentifyer { get; }
         public void SetPercentValue(double percent)
         {
             _logger.LogDebug(this, "set Percent value " + percent);

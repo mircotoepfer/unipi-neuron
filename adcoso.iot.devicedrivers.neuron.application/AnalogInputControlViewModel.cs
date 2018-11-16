@@ -21,7 +21,7 @@ namespace adcoso.iot.devicedrivers.neuron.application
 
             analogInput.OnAnalogInputChanged += AnalogInputOnOnAnalogInputChanged;
 
-            Name = analogInput.UniqueIdentifyer.IdentifyerString;
+            Name = analogInput.UniqueIdentifyer.IdentifierString;
             analogInput.RaiseAllObjectEvents();
         }
 

@@ -34,15 +34,15 @@ namespace adcoso.iot.devicedrivers.neuron.driver.digitaloutputs
 
 
             UniqueIdentifyer = digitalRelayOutputType == DigitalRelayOutputType.DigitalOutput ?
-                new UniqueIdentifyer(_neuronGroup, NeuronResource.DigitalOutput, numberOfOutputOnGroup) :
-                new UniqueIdentifyer(_neuronGroup, NeuronResource.RelayOutput, numberOfOutputOnGroup);
+                new UniqueIdentifier(_neuronGroup, NeuronResource.DigitalOutput, numberOfOutputOnGroup) :
+                new UniqueIdentifier(_neuronGroup, NeuronResource.RelayOutput, numberOfOutputOnGroup);
 
             UpdateLocalValue();
         }
         #endregion Constructor
 
         #region Public Methods
-        public IUniqueIdentifyer UniqueIdentifyer { get; }
+        public IUniqueIdentifier UniqueIdentifyer { get; }
         public void SetOutputValue(OnOffValue value)
         {
             _neuronSpiConnector.SetCoilsValue(_neuronGroup, _coilNumber, value == OnOffValue.On);

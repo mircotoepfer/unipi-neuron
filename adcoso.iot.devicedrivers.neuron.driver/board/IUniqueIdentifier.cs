@@ -18,7 +18,7 @@
         Three = 3
     }
 
-    public interface IUniqueIdentifyer
+    public interface IUniqueIdentifier
     {
         NeuronResource Resource { get; }
 
@@ -27,6 +27,6 @@
         int Number { get; }
 
         
-        string IdentifyerString { get; }
+        string IdentifierString { get; }
     }
 }

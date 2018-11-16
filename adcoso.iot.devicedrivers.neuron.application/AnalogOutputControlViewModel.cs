@@ -20,7 +20,7 @@ namespace adcoso.iot.devicedrivers.neuron.application
         {
             TickFrequency = 0.01;
 
-            Name = analogOutput.UniqueIdentifyer.IdentifyerString;
+            Name = analogOutput.UniqueIdentifyer.IdentifierString;
             _analogOutput = analogOutput;
             _dispatcher = dispatcher;
             _analogOutput.OnAnalogoutputChanged += _analogOutput_OnAnalogoutputChanged;

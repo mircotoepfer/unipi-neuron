@@ -18,7 +18,7 @@ namespace adcoso.iot.devicedrivers.neuron.application
         public DigitalInputControlViewModel(IDigitalInput digitalInput)
         {
             digitalInput.OnDigitalInputChanged += DigitalInput_OnDigitalInputChanged;
-            Name = digitalInput.UniqueIdentifyer.IdentifyerString;
+            Name = digitalInput.UniqueIdentifyer.IdentifierString;
             IndicatorBackground = new SolidColorBrush(Colors.Transparent);
 
             digitalInput.RaiseAllObjectEvents();

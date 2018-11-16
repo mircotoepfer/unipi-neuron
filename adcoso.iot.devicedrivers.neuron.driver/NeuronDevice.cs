@@ -129,9 +129,9 @@ namespace adcoso.iot.devicedrivers.neuron.driver
                 return new ReadOnlyCollection<IDigitalOutput>(items);
             }
         }
-        public IDigitalOutput GetDigitalOutput(IUniqueIdentifyer identifyer)
+        public IDigitalOutput GetDigitalOutput(IUniqueIdentifier identifier)
         {
-            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetDigitalOutput(identifyer)).FirstOrDefault(item => item != null);
+            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetDigitalOutput(identifier)).FirstOrDefault(item => item != null);
         }
         #endregion Digital Outputs
 
@@ -149,14 +149,14 @@ namespace adcoso.iot.devicedrivers.neuron.driver
                 return new ReadOnlyCollection<IDigitalInput>(items);
             }
         }
-        public IDigitalInput GetDigitalInput(IUniqueIdentifyer identifyer)
+        public IDigitalInput GetDigitalInput(IUniqueIdentifier identifier)
         {
-            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetDigitalInput(identifyer)).FirstOrDefault(item => item != null);
+            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetDigitalInput(identifier)).FirstOrDefault(item => item != null);
 
         }
         public IDigitalInput GetDigitalInput(string identifyer)
         {
-            return DigitalInputs.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifyerString.Equals(identifyer) == true);
+            return DigitalInputs.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifierString.Equals(identifyer) == true);
         }
         #endregion Digital Inputs
 
@@ -174,13 +174,13 @@ namespace adcoso.iot.devicedrivers.neuron.driver
                 return new ReadOnlyCollection<IDigitalOutput>(items);
             }
         }
-        public IDigitalOutput GetRelayOutput(IUniqueIdentifyer identifyer)
+        public IDigitalOutput GetRelayOutput(IUniqueIdentifier identifier)
         {
-            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetRelayOutput(identifyer)).FirstOrDefault(item => item != null);
+            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetRelayOutput(identifier)).FirstOrDefault(item => item != null);
         }
         public IDigitalOutput GetRelayOutput(string identifyer)
         {
-            return RelayOutputs.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifyerString.Equals(identifyer) == true);
+            return RelayOutputs.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifierString.Equals(identifyer) == true);
         }
         #endregion Relay Outputs
 
@@ -198,14 +198,14 @@ namespace adcoso.iot.devicedrivers.neuron.driver
                 return new ReadOnlyCollection<IUserLed>(items);
             }
         }
-        public IUserLed GetUserLed(IUniqueIdentifyer identifyer)
+        public IUserLed GetUserLed(IUniqueIdentifier identifier)
         {
-            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetUserLed(identifyer)).FirstOrDefault(item => item != null);
+            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetUserLed(identifier)).FirstOrDefault(item => item != null);
 
         }
         public IUserLed GetUserLed(string identifyer)
         {
-            return UserLeds.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifyerString.Equals(identifyer) == true);
+            return UserLeds.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifierString.Equals(identifyer) == true);
         }
         #endregion User LED's
 
@@ -223,13 +223,13 @@ namespace adcoso.iot.devicedrivers.neuron.driver
                 return new ReadOnlyCollection<IAnalogInput>(items);
             }
         }
-        public IAnalogInput GetAnalogInput(IUniqueIdentifyer identifyer)
+        public IAnalogInput GetAnalogInput(IUniqueIdentifier identifier)
         {
-            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetAnalogInput(identifyer)).FirstOrDefault(item => item != null);
+            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetAnalogInput(identifier)).FirstOrDefault(item => item != null);
         }
         public IAnalogInput GetAnalogInput(string identifyer)
         {
-            return AnalogInputs.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifyerString.Equals(identifyer) == true);
+            return AnalogInputs.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifierString.Equals(identifyer) == true);
         }
         #endregion Analog Inputs
 
@@ -247,13 +247,13 @@ namespace adcoso.iot.devicedrivers.neuron.driver
                 return new ReadOnlyCollection<IAnalogOutput>(items);
             }
         }
-        public IAnalogOutput GetAnalogOutput(IUniqueIdentifyer identifyer)
+        public IAnalogOutput GetAnalogOutput(IUniqueIdentifier identifier)
         {
-            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetAnalogOutput(identifyer)).FirstOrDefault(item => item != null);
+            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetAnalogOutput(identifier)).FirstOrDefault(item => item != null);
         }
         public IAnalogOutput GetAnalogOutput(string identifyer)
         {
-            return AnalogOutputs.FirstOrDefault(item => item?.UniqueIdentifyer?.IdentifyerString.Equals(identifyer) == true);
+            return AnalogOutputs.FirstOrDefault(item => item?.UniqueIdentifyer?.IdentifierString.Equals(identifyer) == true);
         }
         #endregion Analog Outputs
 
@@ -271,13 +271,13 @@ namespace adcoso.iot.devicedrivers.neuron.driver
                 return new ReadOnlyCollection<IOneWireConnector>(items);
             }
         }
-        public IOneWireConnector GetOneWireConnector(IUniqueIdentifyer identifyer)
+        public IOneWireConnector GetOneWireConnector(IUniqueIdentifier identifier)
         {
-            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetOneWireConnector(identifyer)).FirstOrDefault(item => item != null);
+            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetOneWireConnector(identifier)).FirstOrDefault(item => item != null);
         }
         public IOneWireConnector GetOneWireConnector(string identifyer)
         {
-            return OneWireConnectors.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifyerString.Equals(identifyer) == true);
+            return OneWireConnectors.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifierString.Equals(identifyer) == true);
         }
         #endregion One Wire
 
@@ -295,13 +295,13 @@ namespace adcoso.iot.devicedrivers.neuron.driver
                 return new ReadOnlyCollection<IModbusConnector>(items);
             }
         }
-        public IModbusConnector GetModbusConnector(IUniqueIdentifyer identifyer)
+        public IModbusConnector GetModbusConnector(IUniqueIdentifier identifier)
         {
-            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetModbusConnector(identifyer)).FirstOrDefault(item => item != null);
+            return _boards.Where(neuronBoard => neuronBoard != null).Select(neuronBoard => neuronBoard.GetModbusConnector(identifier)).FirstOrDefault(item => item != null);
         }
         public IModbusConnector GetModbusConnector(string identifyer)
         {
-            return ModbusConnectors.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifyerString.Equals(identifyer) == true);
+            return ModbusConnectors.FirstOrDefault(item => item?.UniqueIdentifyer.IdentifierString.Equals(identifyer) == true);
         }
 
         public void RaiseAllObjectEvents()

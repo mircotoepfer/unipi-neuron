@@ -17,7 +17,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.analoginput
         internal AnalogInput(NeuronGroup neuronGroup, int number, ushort registerNumber, NeuronSpiConnector spiConnector)
         {
             _registerNumber = registerNumber;
-            UniqueIdentifyer = new UniqueIdentifyer(neuronGroup, NeuronResource.AnalogInput, number);
+            UniqueIdentifyer = new UniqueIdentifier(neuronGroup, NeuronResource.AnalogInput, number);
 
             var value = spiConnector.GetSingleRegisterValue(neuronGroup, 1021);
 
@@ -42,7 +42,7 @@ namespace adcoso.iot.devicedrivers.neuron.driver.analoginput
             _vRealInt = 3.3 * ((double)vRef / (double)vRefInt);
         }
 
-        public IUniqueIdentifyer UniqueIdentifyer { get; }
+        public IUniqueIdentifier UniqueIdentifyer { get; }
         public double GetPercentValue() => GetPercentValueFromCurrentRegisterValue();
 
         public double GetVoltageValue() => GetVoltageValueFromCurrentRegisterValue();
