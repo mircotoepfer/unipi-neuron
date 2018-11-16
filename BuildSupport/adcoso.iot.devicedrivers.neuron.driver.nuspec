@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+    <id>adcoso.iot.devicedrivers.neuron.driver</id>
+    <version>1.0.0</version>
+      <authors>Mirco Töpfer</authors>
+      <owners>Mirco Töpfer</owners>
+      <requireLicenseAcceptance>true</requireLicenseAcceptance>
+      <licenseUrl>https://www.adcoso.de/unternehmen/softwareprodukte/unipi-geraete-treiber/lizenz/</licenseUrl>
+      <projectUrl>https://www.adcoso.de/unternehmen/softwareprodukte/unipi-geraete-treiber/</projectUrl>
+      <description>Community Edition of the Hardware access (driver) library to access functions like digital in and outputs, 1-wire, analog out and input as well as user led of the Unipi Neuron.</description>
+      <copyright>adcoso GmbH</copyright>
+      <tags>Unipi Neuron Driver Raspberry Pi Automation</tags>
+      <dependencies>
+        <dependency id="Microsoft.NETCore.UniversalWindowsPlatform" version="6.0.6" />
+      </dependencies>
+  </metadata>
+  <files>
+    <file src="Dotfuscated\adcoso.iot.devicedrivers.neuron.driver.dll" target="lib\uap10.0" />
+  </files>
+</package>

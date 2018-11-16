@@ -1,0 +1,31 @@
+﻿<UserControl
+    x:Class="adcoso.iot.devicedrivers.neuron.application.UserLedControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400"
+    DataContext="{Binding ViewModel, RelativeSource={RelativeSource Self}}" >
+
+    <Grid Margin="5"
+    BorderBrush="{ThemeResource ApplicationForegroundThemeBrush}"
+    BorderThickness="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Center" FontWeight="Bold" Foreground="{ThemeResource ApplicationForegroundThemeBrush}" Text="{Binding Path=Name}" Grid.Row="0"></TextBlock>
+
+        <Ellipse Margin="5" Grid.Row="1" Fill="{Binding Path=IndicatocColor}" Width="40" Height="40"  HorizontalAlignment="Center" VerticalAlignment="Center"   ></Ellipse>
+
+        <Button Margin="2"  Content="On" HorizontalAlignment="Stretch" Height="30"  Grid.Row="2" Command="{Binding Path=OnCommand}" ></Button>
+        <Button Margin="2"  Content="Off" HorizontalAlignment="Stretch" Height="30"  Grid.Row="3" Command="{Binding Path=OffCommand}" ></Button>
+        <Button Margin="2"  Content="Blink" HorizontalAlignment="Stretch" Height="30"  Grid.Row="4" Command="{Binding Path=BlinkCommand}" ></Button>
+
+    </Grid>
+</UserControl>

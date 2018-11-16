@@ -1,0 +1,14 @@
+﻿<Page
+    x:Class="adcoso.iot.devicedrivers.neuron.application.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+    <Grid>
+        <ScrollViewer VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" HorizontalScrollMode="Enabled" VerticalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
+            <StackPanel Name="ContentPanel" Background="Transparent" ></StackPanel>
+        </ScrollViewer>
+        <Image Source="Assets/Square150x150Logo.png" Margin="-40,-40,0,0" Width="200" Height="200" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+    </Grid>
+</Page>
